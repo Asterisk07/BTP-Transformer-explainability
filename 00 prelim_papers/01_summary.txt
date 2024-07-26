@@ -1,0 +1,57 @@
+AttentionViz: A Global View of Transformer Attention
+
+pg 1:
+what is L1 H6 etc?
+layer, head
+creation of new tool (AttentionViz)
+existing apporaches :
+biprartite graph (paper 51,53)
+heatmap (paper 20,30)
+
+pg 2 :
+main two techniques exist to seek patterns that generalise across inputs: \
+
+1.  visualising collections of embedding vectors, for eg clusters that correspond to word (paper 43)(more reading needed)
+
+        2. for images " find images that maximise activation of particular units (idk how it will help, can prof give any idea or intuition)   paper 17,61
+
+pg 3:
+
+    bipartite graphs work well for analysing NLP transfomers, but not used for vision yet
+
+    AttentionViz task list :
+        visualise attention heads
+        explore and visualise  key-query interactions:
+            for attention pattern comparison, anomlay detection
+
+pg 4:
+dot product corelated directly to distance between q and k:
+but them must be first normalised by sqrt(d)
+
+    manipulations :
+        1 . translate all k vectors to get same mean as q, since softmax is immune to translation
+        2. similarly, scale them to get same variance
+
+    now distance is a proxy for attention (closer is hiigh attentions)
+    discrete coloring better to see small offsets
+
+pg 7-9:
+findings : 1. tokens with same color or brightness or cirvature or same row or same column clustered together 2. text based :
+2 main pattersn:
+spiralling : attention to many different tokens
+clumps : attention to one token away
+if key-query are similar:
+tokens typically look at self or very similar tokens
+
+    main modes :
+        matrix view for glovbal perspective to compare all heads at once
+        joint key-query embeddings visulatisation :
+            helps with causal tracing to visualise attention flow through the model
+        note : tool is specially tailored for self attention
+
+doubts :
+pg 2 : top left corner
+point 2.2 above
+
+resources:
+http://attentionviz.com/ : for viewing q-k embeddings

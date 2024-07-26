@@ -1,0 +1,58 @@
+How Does Attention Work in Vision Transformers?
+A Visual Analytics Attempt
+
+note : a visual analytis solution to interpret ViTs
+pg 1:
+ViT basics :
+    breaks down image into smaller patches and arranges in sequence
+        each patch is analogous to a token of nlp
+    then applies multi head self attention on them
+
+main questions :
+    which heads are most important?
+            we may have to give a self atetnion score to a head, to quantify its importance.
+            this score is its imapct on prediction to verufy the score.
+            BUT heads with less impact on output may have high impact on intermediate representation
+        is this consistant across different images?
+
+    dependence of attention of patches , on distance, on laters.
+        for eg CNNs extract basic shapes in early layers and complex features in later layeers. does ViT does the same?
+
+    attention patterns learn by each head?
+    do they depend on image contents or not?
+
+note : 
+    VIT attention visualisation is slighlty diferent since even thought the patches are arreaged in seqeunce, attention trend is still there columnwise. this 2d nature is not catpured in a seqeunce and is tougher to visualise
+
+    also : substancial work exists in heatmap and bipartiatte graphs , for nlp tasks
+
+    "Attentions learned from images with a 2D spatial context have much richer patterns that are difficult to be identified and summarized manually"
+
+two types of aptches : CLS (class related) and patches
+pg 5:
+    evaluating head importances:
+        remove the head and evaluate:
+            effect on overall ojutput
+                probablitiy, JSD 
+                    however this isnt the best approach since removing a head, later layers may compesnate for that removal
+            layerwise impact on activations :
+                cosine distance
+    divide attention matrix into 4 regions : 
+        CLS→CLS, CLS→patches, patches→CLS,
+        and patches→patches. Regions CLS→patches and
+        patches→CLS are considered together, as they both encode
+        the interaction between the CLS and patch tokens
+    six different pruning modes defined
+
+pt 6 :
+ATTENTION IMPOTRANCE VIEW : 
+where do the heads focus?
+    attention strength vector s
+    evalute streth for all headswe can see whether it is focused on certain neighbours, spread acorrs all neighbours etc
+
+results:
+    autoencod3er based solution was used
+    al tokens strongly attened to themself
+    one head consistently made all patches attend to itself, and was important in lower layers which is intuitive
+
+
