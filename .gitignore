@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# datasets
+oxford*
+
 # Mac cache
 .DS_Store
 
