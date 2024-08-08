@@ -5,6 +5,8 @@ __pycache__/
 
 # datasets
 oxford*
+*.gz
+*.bz2
 
 # Mac cache
 .DS_Store
