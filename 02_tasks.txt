@@ -1,0 +1,19 @@
+downscale model while maintaing performance
+
+1. change image to black and white [x3] ayushmaan ✅
+2.  per class 100 images , reduce to 20 [x5] yajat : see operations on type (torchvision.datasets.oxford_iiit_pet.OxfordIIITPet)
+3. downscale image pixels from 144 to 72 yajat
+3. paramaters:
+    n_heads : 
+    n_embed or emb_dim : decrease from 32
+    patchsize : increase from 4
+    n_layer decrease from 6
+
+4. Run reduced code, expected <1hr
+
+
+
+note :
+3680 images
+classes ?
+image is 3x144x144

@@ -1,0 +1,84 @@
+Week 1 : 
+1. Chosen model and problem and all 
+2. why we chose Vit over text? 
+1. problem of POS and context etc in text 
+2. Prior experience with CNNs 
+3. relatively more interpretable positional encodings in ViT
+
+    3. Trained ViT, got very less accuracy
+
+Week 2 : fixing the Vit:
+ 1. two main problems :
+  1. multiple classes so too many different parameters to train
+
+        2. vanishing gradient problem (?) (test in data)
+            cause : backprop causes previous grddients to go much lowet than higher onves since its multiplied again and again
+
+            proposed solutions :
+            maybe reduce model size?
+            https://chatgpt.com/share/b3efc003-42f9-4c72-ad94-6367dd405d3c
+
+        3. Attention difficult to interpret :
+            soltuions (?) :
+                1.  reduced image size from tk to tk
+                2. converted channels from 3 to 1
+
+-----------------------------------------------------------
+        Main proposed Improvements to current model:
+            check labels (2)
+            1. binary classification (change classse)
+             and BCE loss
+            2. Reduce number of layers
+            3. Look at gradients (2)
+            4. put dropout and skip connections
+
+             OR change dataset to get dataset with more samples (CIFAR) ❌
+
+              OR change architecture totally (Resnet etc) ❌
+
+
+        If that doesnt work:
+        BUZZWORD : PRETRAIN !
+        1. pretrained resrouces :
+            1. https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html#torchvision.models.vit_b_16
+            2. Imagenet
+        2. Hyperaperemter copy:
+            1 ) someone said Hugging fave
+             2) fine tuning sttrats like LORA etc(need pretrained anyway)
+        3. Tensorflow implementation
+
+
+            1. triaiming with only 2040 samples? idk if this is true ? needs verification :
+                https://github.com/niranjankrishna-acad/Training-Vision-Transformers-with-Only-2040-Images
+                    1. inspect dataset
+                    2. inspect model acrichtecture if it is correct? is it really a Vit?
+                    3. Do we fully understand the model?
+                    3. is the model interpretable? as in can we interpret all the components?
+           
+
+            1.  Google/Read out how to train a dataset with less training samples
+                https://www.reddit.com/r/MachineLearning/comments/1av70eo/d_how_to_train_vit_vs_cnn/
+
+                some quotes (unverified) (?):
+                    1. 'More data. VIT's scales better with larger datasets, but tend not to do well with smaller datasets. My rule of thumb is greater than 100k "samples" and you are getting into VIT dataset size.'
+
+                    2.
+
+
+
+
+            other ideas :
+                1. transfer learning : train a CNN first on the data then use weights for Vit
+                2. fine tuning sttrats like LORA etc (see reddit thread)
+                2. find pretrained weights, example imagenet etc (see the reddit thread above)
+                    eg simplest thing to do would be to use a pre trained vit network and then fine tune it on the new dataset by changing the classification head
+
+            2.Find a dataset with more training examples, on which ViT can be trained
+
+
+        To convert from
+
+Week 3 :
+Started analysis of image:
+proposed resoirce :
+https://viso.ai/deep-learning/vision-transformer-vit/#:~:text=Particularly%2C%20if%20the%20ViT%20model,the%20process%20of%20fine%2Dtuning
