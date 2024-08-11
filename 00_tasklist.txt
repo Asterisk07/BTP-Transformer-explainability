@@ -2,9 +2,9 @@ tasklist :
 11th 
 set to (✅)
 
-A Classes change: ❌ Amp
+A Classes change: ✅ a
     1. type from classes_ref.ipynb into list manually
-    2. change these into the list manually
+    2. change these into the list manually 
     set labels manually :
     1200 , 0
     1500, 0
@@ -15,9 +15,12 @@ A Classes change: ❌ Amp
     2450, 0
     2750, 0
 
-    3. zip the list
+    set 2800 to dog
+
+
+    3. zip the list 
     4. load zippped list and check wtih non loaded list 
-    save into classes_list.gz
+    save into classes_list.gz 
         eg :
         with gzip.open('new_labels.gz', 'rb') as f:
             loaded_labels = pickle.load(f)
@@ -27,13 +30,13 @@ A Classes change: ❌ Amp
         # # Display the loaded list
         # print("Loaded list:", loaded_list)
 
-B Binary class ❌ amp
+B Binary class ✅ a
     1. write code to change dataset classes to classes from clases_list.gz
     2. BCE loss
     3. Reduce number of layers
     4. Train and loss and accuracy
 
-C Gradients: ❌  yaj
+C Gradients: ❌  y
     1. write code to fetch and display gradient from any layers [weite a function]
     2. see if graident can be even seen? else just display weights 
 
@@ -45,8 +48,8 @@ Next meet :
 ---------------------------------------------------------
 Monday 12th:
 
-C look at implmenetation using just 2k samples on vit:
-    triaiming with only 2040 samples? idk if this is true ? needs verification : (Amp)
+C look at implmenetation using just 2k sales on vit:
+    triaiming with only 2040 sales? idk if this is true ? needs verification : (a)
         https://github.com/niranjankrishna-acad/Training-Vision-Transformers-with-Only-2040-Images
             1. inspect dataset
             2. inspect model acrichtecture if it is correct? is it really a Vit?
@@ -54,7 +57,7 @@ C look at implmenetation using just 2k samples on vit:
             3. is the model interpretable? as in can we interpret all the components?
 
 D Read pretrained
-     1. pretrained resrouces : (Yaj)
+     1. pretrained resrouces : (y)
             1. https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html#torchvision.models.vit_b_16
             2. Imagenet
 
