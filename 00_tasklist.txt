@@ -2,75 +2,77 @@ tasklist :
 11th 
 set to (✅)
 
-A Classes change: ✅ a
-    1. type from classes_ref.ipynb into list manually
-    2. change these into the list manually 
-    set labels manually :
-    1200 , 0
-    1500, 0
-    1650, 1
-    2050, 0
-    2250, 0
-    2350, 0
-    2450, 0
-    2750, 0
+week 1:
 
-    set 2800 to dog
+    A Classes change: ✅ a
+        1. type from classes_ref.ipynb into list manually
+        2. change these into the list manually 
+        set labels manually :
+        1200 , 0
+        1500, 0
+        1650, 1
+        2050, 0
+        2250, 0
+        2350, 0
+        2450, 0
+        2750, 0
+
+        set 2800 to dog
 
 
-    3. zip the list 
-    4. load zippped list and check wtih non loaded list 
-    save into classes_list.gz 
-        eg :
-        with gzip.open('new_labels.gz', 'rb') as f:
-            loaded_labels = pickle.load(f)
-        # with gzip.open('binary_label_dict.gz', 'rb') as f:
-        #     loaded_labels = pickle.load(f)
+        3. zip the list 
+        4. load zippped list and check wtih non loaded list 
+        save into classes_list.gz 
+            eg :
+            with gzip.open('new_labels.gz', 'rb') as f:
+                loaded_labels = pickle.load(f)
+            # with gzip.open('binary_label_dict.gz', 'rb') as f:
+            #     loaded_labels = pickle.load(f)
 
-        # # Display the loaded list
-        # print("Loaded list:", loaded_list)
+            # # Display the loaded list
+            # print("Loaded list:", loaded_list)
 
-B Binary class ✅ a
-    1. write code to change dataset classes to classes from clases_list.gz
-    2. BCE loss
-    3. Reduce number of layers
-    4. Train and loss and accuracy
+    B Binary class ✅ a
+        1. write code to change dataset classes to classes from clases_list.gz
+        2. BCE loss
+        3. Reduce number of layers
+        4. Train and loss and accuracy
 
-C Gradients: ❌  y
-    1. write code to fetch and display gradient from any layers [weite a function]
-    2. see if graident can be even seen? else just display weights 
+    C Gradients: ❌  y
+        1. write code to fetch and display gradient from any layers [weite a function]
+        2. see if graident can be even seen? else just display weights 
 
-Next meet :
+    Next meet :
     look at performance after A and B
     look grads if needed : 
         then go for dropout or skip
 
 ---------------------------------------------------------
 Monday 12th:
+Week 2:
+    C look at implmenetation using just 2k sales on vit:
+        triaiming with only 2040 sales? idk if this is true ? needs verification : (a)
+            https://github.com/niranjankrishna-acad/Training-Vision-Transformers-with-Only-2040-Images
+                1. inspect dataset
+                2. inspect model acrichtecture if it is correct? is it really a Vit?
+                3. Do we fully understand the model?
+                3. is the model interpretable? as in can we interpret all the components?
 
-C look at implmenetation using just 2k sales on vit:
-    triaiming with only 2040 sales? idk if this is true ? needs verification : (a)
-        https://github.com/niranjankrishna-acad/Training-Vision-Transformers-with-Only-2040-Images
-            1. inspect dataset
-            2. inspect model acrichtecture if it is correct? is it really a Vit?
-            3. Do we fully understand the model?
-            3. is the model interpretable? as in can we interpret all the components?
+    D Read pretrained
+        1. pretrained resrouces : (y)
+                1. https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html#torchvision.models.vit_b_16
+                2. Imagenet
 
-D Read pretrained
-     1. pretrained resrouces : (y)
-            1. https://pytorch.org/vision/main/models/generated/torchvision.models.vit_b_16.html#torchvision.models.vit_b_16
-            2. Imagenet
-
-        2. Hyperaperemter copy/fine tuning:
-            1 ) someone said Hugging fave : write code 
-             2) fine tuning sttrats like LORA etc(need pretrained anyway) : write
-        3. 
-
-
+            2. Hyperaperemter copy/fine tuning:
+                1 ) someone said Hugging fave : write code 
+                2) fine tuning sttrats like LORA etc(need pretrained anyway) : write
+            3. 
 
 
-    dataset : CIFAR
-    Tensorflow implementation
+
+
+        dataset : CIFAR
+        Tensorflow implementation
 
     
 
