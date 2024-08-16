@@ -2,6 +2,37 @@ tasklist :
 11th 
 set to (✅)
 
+week 3 : 
+    1. abstract ⭕
+    2. kaggle : 17 flowers: [REFERENCE for training loop]
+        https://www.kaggle.com/code/asterisk007/17-flowers
+        
+    3.[CODE] vit2 : change learning rate manually by seeing  [CODE]: ayushmaan
+    
+    3. cnn : transfer and replicating
+        transfer learning : https://www.learnpytorch.io/06_pytorch_transfer_learning/ [REFERENCE]
+
+
+      [CODE] 3/4  replicating : 
+        https://www.learnpytorch.io/08_pytorch_paper_replicating/
+
+    4. LLM : 3 lecture (for anlaysis) [LATER]
+        watch : https://lcs2-iitd.github.io/ELL881-AIL821-2401/lectures/
+        lecs 5.3, 6.1, 6.2
+
+    4. pre training : yajat
+     [CODE]   pytorch pretrained : vit_b_32(ViT_B_32_Weights.IMAGENET1K_V1)  into vit_b_32
+            take weights and put into vit_2 (new file)
+        redownload oxford dataset 
+        
+
+      [CODE] 3/4 try with new dataset: <insert link>
+
+      ANlalysis :
+        1. feature atrribution method from cnn
+        2. 
+
+
 week 1:
 
     A Classes change: ✅ a
