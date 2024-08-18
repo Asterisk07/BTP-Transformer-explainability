@@ -2,6 +2,28 @@ tasklist :
 11th 
 set to (✅)
 
+week 3 . 2 : 
+    1 . look at 
+    https://github.com/kentaroy47/vision-transformers-cifar10
+
+    instead of running from command line, we need to go and set these arguments manually
+    i.e. open train_cifar10.py and manually set patchsise = 4 and epoch  = 500
+    and train the model
+    (btw if you start gettting good accuracy then stop traiing, since we need to add logit saving code and train again)
+
+    2 . vit_food.ipynb (in this repo) for reference : added as ipynb
+    can copy codes for git clone etc
+    noet : this one is modified version, original can be seen at his page (linekd at top of vit_food.ipynb)
+
+    3. other resource if 1 doesnt work out :
+    this guy has written this blog and claims to acheive 75% after 100 lines of training in blog
+    but in his code there is only 5 epochs tak trianing so less reliable   
+
+    code : https://github.com/tintn/vision-transformer-from-scratch/blob/main/vision_transformers.ipynb
+
+    blog : https://tintn.github.io/Implementing-Vision-Transformer-from-Scratch/
+
+
 week 3 : 
     1. abstract ⭕
     2. kaggle : 17 flowers: [REFERENCE for training loop]
