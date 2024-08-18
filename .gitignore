@@ -3,6 +3,10 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# temp files
+tempcoderunner*
+try*
+
 # datasets
 oxford*
 *.bz2
