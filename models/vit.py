@@ -88,7 +88,7 @@ class Transformer(nn.Module):
             # Combine the attention output with the original x
             x = attn_out + x
             self.saved_values.append(x.cpu().detach().numpy())  # Save logits
-            print("i : ",i)
+            # print("i : ",i)
             # Apply the feedforward network
             x = ff(x) + x
 
