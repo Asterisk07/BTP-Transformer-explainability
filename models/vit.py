@@ -61,14 +61,15 @@ class Attention(nn.Module):
 
         out = torch.matmul(attn, v)
         out = rearrange(out, 'b h n d -> b n (h d)')
-        return self.to_out(out),q,k,v
+        # return self.to_out(out),q,k,v
+        return self.to_out(out)
 
 class Transformer(nn.Module):
     def __init__(self, dim, depth, heads, dim_head, mlp_dim, dropout=0.):
         super().__init__()
         self.layers = nn.ModuleList([])
 #         self.saved_values = {'logits': [], 'queries': [], 'keys': [], 'values': []}  # To store the values
-        self.saved_values = list()  # To store th
+        # self.saved_values = list()  # To store th
         for _ in range(depth):
             self.layers.append(nn.ModuleList([
                 PreNorm(dim, Attention(dim, heads=heads, dim_head=dim_head, dropout=dropout)),
@@ -78,16 +79,17 @@ class Transformer(nn.Module):
     def forward(self, x):
         for i, (attn, ff) in enumerate(self.layers):
             # Unpack the output from the Attention layer
-            attn_out, q, k, v = attn(x)
+            # 
+            attn_out = attn(x)
             
             # Save the query, key, value, and logits (output) for this layer
-            self.saved_values.append(q.cpu().detach().numpy())
-            self.saved_values.append(k.cpu().detach().numpy())
-            self.saved_values.append(v.cpu().detach().numpy())
+            # self.saved_values.append(q.cpu().detach().numpy())
+            # self.saved_values.append(k.cpu().detach().numpy())
+            # self.saved_values.append(v.cpu().detach().numpy())
 
             # Combine the attention output with the original x
             x = attn_out + x
-            self.saved_values.append(x.cpu().detach().numpy())  # Save logits
+            # self.saved_values.append(x.cpu().detach().numpy())  # Save logits
             # print("i : ",i)
             # Apply the feedforward network
             x = ff(x) + x
