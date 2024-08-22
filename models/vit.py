@@ -87,7 +87,7 @@ class Transformer(nn.Module):
         for i, (attn, ff) in enumerate(self.layers):
             # Unpack the output from the Attention layer
             # 
-            attn_out = attn(x,save_flag)
+            attn_out = attn(x,save_flag=save_flag)
             
            
 
