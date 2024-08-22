@@ -51,8 +51,15 @@ class Attention(nn.Module):
             nn.Dropout(dropout)
         ) if project_out else nn.Identity()
 
-    def forward(self, x):
+    def forward(self, x,save_flag=False):
         qkv = self.to_qkv(x).chunk(3, dim = -1)
+        if(save_flag==True):
+                # Convert each tensor in `qkv` to a numpy array and save it
+#                 qkv=attention.to_qkv 
+                for i, tensor in enumerate(qkv):
+                    np_array = tensor.detach().cpu().numpy()  # Convert to numpy
+                    np.save(f'qkv_{i}.npy', np_array)  # Save each as a .npy file
+        
         q, k, v = map(lambda t: rearrange(t, 'b n (h d) -> b h n d', h = self.heads), qkv)
 
         dots = torch.matmul(q, k.transpose(-1, -2)) * self.scale
@@ -76,12 +83,14 @@ class Transformer(nn.Module):
                 PreNorm(dim, FeedForward(dim, mlp_dim, dropout=dropout))
             ]))
 
-    def forward(self, x):
+    def forward(self, x,save_flag=False):
         for i, (attn, ff) in enumerate(self.layers):
             # Unpack the output from the Attention layer
             # 
-            attn_out = attn(x)
+            attn_out = attn(x,save_flag)
             
+           
+
             # Save the query, key, value, and logits (output) for this layer
             # self.saved_values.append(q.cpu().detach().numpy())
             # self.saved_values.append(k.cpu().detach().numpy())
@@ -128,7 +137,7 @@ class ViT(nn.Module):
             nn.Linear(dim, num_classes)
         )
 
-    def forward(self, img):
+    def forward(self, img,save_flag=False):
         x = self.to_patch_embedding(img)
         b, n, _ = x.shape
 
@@ -137,7 +146,14 @@ class ViT(nn.Module):
         x += self.pos_embedding[:, :(n + 1)]
         x = self.dropout(x)
 
-        x = self.transformer(x)
+        x = self.transformer(x,save_flag)
+#         if(save_flag==True):
+#                 # Convert each tensor in `qkv` to a numpy array and save it
+#                 qkv=attention.to_qkv 
+#                 for i, tensor in enumerate(qkv):
+#                     np_array = tensor.detach().cpu().numpy()  # Convert to numpy
+#                     np.save(f'qkv_{i}.npy', np_array)  # Save each as a .npy file
+                
 
         x = x.mean(dim = 1) if self.pool == 'mean' else x[:, 0]
 
