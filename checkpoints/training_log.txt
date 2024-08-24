@@ -1,0 +1,10 @@
+Epoch 1: Accuracy = 41.9400, Loss = 32.3043
+Epoch 10: Accuracy = 60.8900, Loss = 21.4012
+Epoch 20: Accuracy = 70.0700, Loss = 16.7696
+Epoch 30: Accuracy = 75.6000, Loss = 13.7528
+Epoch 40: Accuracy = 78.4100, Loss = 12.3708
+Epoch 50: Accuracy = 81.1600, Loss = 11.0785
+Epoch 60: Accuracy = 82.9300, Loss = 9.8264
+Epoch 70: Accuracy = 84.1800, Loss = 9.1939
+Epoch 80: Accuracy = 85.0500, Loss = 8.7023
+Epoch 90: Accuracy = 86.1500, Loss = 8.2894
