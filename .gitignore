@@ -6,6 +6,7 @@ __pycache__/
 # temp files
 tempcoderunner*
 try*
+*.zip
 
 # results
 results*
