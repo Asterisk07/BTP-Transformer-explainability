@@ -1,0 +1,12 @@
+tasklist : 
+attention : 
+    1. freq histogram
+    2. merge into bands
+    3. write full function 
+    write me a function that given a list of lenfth 6, and the list has inside it 6 tensors each of shape 1x8x65x65
+
+questiions:
+    1. find for each head the threshold for red,amber,green [CODE]
+    2. identify image_ids which have clear seperation [MANUALLY]
+    3. vary head and query patch : find std and arrange in decreasing order
+        then make heatmap
