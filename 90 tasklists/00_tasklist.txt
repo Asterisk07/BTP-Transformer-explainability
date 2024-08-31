@@ -2,6 +2,17 @@ tasklist :
 11th 
 set to (✅)
 
+31 August week:
+Worked in file : DFS_frog_yajat
+
+1.) We will be connecting with PHD student (Mahroosh)
+2.)  See how attention maps behave when  images with multiple objects
+ 3.) Get more complex images from Kailash
+ -    Fewer heads have problem with confounding maps
+4.) We look at the  output layer ( when attention maps multiplied by value) (it will have all heads combined)
+5.) Downsample the image of dog/cat combine we had to 32*32  - Y
+
+
 week 3 . 2 : 
     1 . look at 
     https://github.com/kentaroy47/vision-transformers-cifar10
