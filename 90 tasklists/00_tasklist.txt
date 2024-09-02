@@ -11,6 +11,8 @@ Worked in file : DFS_frog_yajat
  -    Fewer heads have problem with confounding maps
 4.) We look at the  output layer ( when attention maps multiplied by value) (it will have all heads combined)
 5.) Downsample the image of dog/cat combine we had to 32*32  - Y
+6. see 04 tried from new dataset , evauated on images from visualisation repo and all iamges failed -A
+7. see prpbabilites(confidence) and attentions on the same and what assigned on misclassified -A
 
 
 week 3 . 2 : 
