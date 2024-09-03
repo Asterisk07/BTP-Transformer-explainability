@@ -4,15 +4,16 @@
 
 1. Objective and Abstract
 2. Why do we need this project(Scope)
-3. Preliminary papers studied till now
 
-4. Main Paper : i Images worth 16 x 16 words
+1 . Preliminary papers and MAin paper : 
+s  : i Images worth 16 x 16 words
                 ii Analysis Paper (Neuron embedding visualisation)
                (tk) iii 03 Visualizing_and_Understanding_Patch_Interactions_in_Vision_Transformer
 
 
-5. Code Used: Kentaroy 
-6 Dataset : i) Dataset 1: Oxford pet (5k images too less to train transformer) Even tried reducing classes
+2. Code Used: Kentaroy (also tell about architecthture in some detail) and parameters etc etc 
+and train time, epochs etc etc
+3 Dataset : i) Dataset 1: Oxford pet (5k images too less to train transformer) Even tried reducing classes
                 from 30 to 2 still didnt achieve high accuracy
             ii) Cifar-10 : 
                     a) Learning Rate: 1e-3  , 150 epoches and 77% accuracy
@@ -22,7 +23,9 @@
                     c) Heads: 2  , 90 epoches and 84% accuracy
                     d)  Heads: 8  , 90 epoches and 86% accuracy
 
-7. Analysis : 
+4. training results : time take, accuracy etc etc
+
+5.. Analysis : 
 i. Saved checkpoints(weights only) every 10 epoches
 ii. Got correctly classified images (5)
 iii Passed image through model and saved attention
