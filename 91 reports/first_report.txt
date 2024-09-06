@@ -30,7 +30,7 @@ i. Saved checkpoints(weights only) every 10 epoches
 ii. Got correctly classified images (5)
 iii Passed image through model and saved attention
 iv Plotted attention heat map 
-v. (tk) Tested on different dataset(Results)
+v. (tk) Tested on different dataset(Results):
 
 
 

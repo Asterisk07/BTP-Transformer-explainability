@@ -1,0 +1,24 @@
+1. (2nd dataset, internet) 
+eval on image where size of animals is the same.  (E)
+why : previous cases may have resultsd from unqueal sizes of objects.
+(A)
+
+2. (1st dataset (cifar10)) 
+eval on merge two animals images (?)(hstack or vstack etc) (H)
+why : to create examples of multi objects from same trained dataset
+(Y)
+
+3. (train)
+train on cifar 100 with 20 classes (H)
+why : to check performance with more classes
+(A)
+
+2,3,4,8 heads (1 line)
+why : to see whetehr 2 heads are enough? right now most heads are uselss
+(Y)
+
+4. patience parameter to stop training (E)
+why : to stop training at correct time
+
+4. cifar 10 : 2,3,4,8 heads : run training till
+5. grad cams ❌
