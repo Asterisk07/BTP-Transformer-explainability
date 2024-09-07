@@ -15,10 +15,10 @@ why : to check performance with more classes
 
 2,3,4,8 heads (1 line)
 why : to see whetehr 2 heads are enough? right now most heads are uselss
-(Y)
+
 
 4. patience parameter to stop training (E)
-why : to stop training at correct time
+why : to stop training at correct time (Y)
 
 4. cifar 10 : 2,3,4,8 heads : run training till
 5. grad cams ❌
