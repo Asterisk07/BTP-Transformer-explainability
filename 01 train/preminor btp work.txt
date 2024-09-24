@@ -1,0 +1,3 @@
+patience 10 epochs
+1. attention heatmaps on pretrained vit cifar100 : heatmaps etc
+2. send to Mahrush maam : papers
