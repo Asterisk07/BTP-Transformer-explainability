@@ -8,6 +8,14 @@ tempcoderunner*
 try*
 *.zip
 
+
+# all prtrained checkpoints:
+10.9_pretrained_checkpoints/*.pth
+Pretrained_checkpoints/model_state_dict.pth
+
+# vit repo:
+21 EDA/ViT_visualization
+
 # results
 results*
 
@@ -175,4 +183,4 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
-Pretrained_checkpoints/model_state_dict.pth
+
